@@ -1,0 +1,22 @@
+package airhacks;
+
+import software.amazon.awscdk.App;
+import software.amazon.awscdk.Tags;
+
+public interface CDKApp {
+    String appName = "quarkus-agent-core";
+
+    static void main(String... args) {
+
+        var app = new App();
+        Tags.of(app).add("project", "airhacks.live");
+        Tags.of(app).add("environment", "workshops");
+        Tags.of(app).add("application", appName);
+
+        var configuration = new Configuration(appName);
+        var stackProps = configuration.stackProperties();
+
+        new PlaceHolderStack(app, appName, stackProps);
+        app.synth();
+    }
+}
