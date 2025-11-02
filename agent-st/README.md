@@ -1,9 +1,15 @@
-# service-st
+# Agent System Tests
 
-To perform black box tests locally (uses http://localhost:8080 by default):
+Black box tests for the deployed agent runtime.
 
-export AGENT_ARN=[AgentArn exported during CDK deployment]
+## Configuration
 
+```bash
+export AGENT_ARN=[AgentArn from CDK deployment output]
 ```
+
+## Run
+
+```bash
 mvn clean test-compile failsafe:integration-test
 ```
