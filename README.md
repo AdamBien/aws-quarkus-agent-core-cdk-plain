@@ -31,3 +31,7 @@ The agent implements [AWS Bedrock Agent Runtime HTTP contract](https://docs.aws.
 
 - **AgentRuntimeId**: Identifier of the deployed agent runtime
 - **AgentArn**: ARN of the deployed agent runtime
+
+- [BCE Architecture Design Pattern](https://bce.design/) - This project organizes code using the Boundary-Control-Entity pattern
+- This project is a member of [Constructions Cloud](https://constructions.cloud/).
+See you at: [airhacks.live](https://airhacks.live)
