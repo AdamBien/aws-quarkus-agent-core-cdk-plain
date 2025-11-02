@@ -14,7 +14,7 @@ public class AgentCoreStack
         super(scope, ConventionalDefaults.stackName(appName, "agent-core"), stackProps);
         var agentArtifact = AgentRuntimeArtifact.fromAsset(ConventionalDefaults.dockerFilePath.toString());
         var runtime = software.amazon.awscdk.services.bedrock.agentcore.alpha.Runtime.Builder.create(this, "AgentRuntime")
-                .runtimeName("quarkus-agent-core")
+                .runtimeName("QuarkusAgentRuntime")
                 .agentRuntimeArtifact(agentArtifact)
                 .networkConfiguration(RuntimeNetworkConfiguration.usingPublicNetwork())
                 .build();
