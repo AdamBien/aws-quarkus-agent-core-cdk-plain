@@ -16,7 +16,7 @@ public interface CDKApp {
         var configuration = new Configuration(appName);
         var stackProps = configuration.stackProperties();
 
-        new PlaceHolderStack(app, appName, stackProps);
+        new AgentCoreStack(app, appName, stackProps);
         app.synth();
     }
 }
